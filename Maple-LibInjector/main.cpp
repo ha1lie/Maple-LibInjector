@@ -373,15 +373,20 @@ int main(int argc, char **argv) {
         std::exit(1);
     }
 
-    fs::path process = argv[1];
+    fs::path targetID = argv[1];
     fs::path library = fs::canonical(argv[2]);
 
     es_client_t *client = NULL;
     ensureEq(es_new_client(&client, ^(es_client_t *client, const es_message_t *message) {
         switch (message->event_type) {
             case ES_EVENT_TYPE_AUTH_EXEC: {
-                const char *name = message->event.exec.target->executable->path.data;
-                if (fs::equivalent(name, process)) {
+                const char *signingID = message->event.exec.target->signing_id.data;
+                
+//                std::cout << "Signing ID: " << signingID << std::endl;
+                
+                // Compare to the signing ID, opposed to executable location
+                if (!targetID.compare(signingID)) {
+                    
                     pid_t pid = audit_token_to_pid(message->process->audit_token);
                     try {
                         inject(pid, library);
