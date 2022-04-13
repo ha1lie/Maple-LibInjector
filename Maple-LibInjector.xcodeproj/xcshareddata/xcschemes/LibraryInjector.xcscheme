@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "56760EDD26E46D2E0023A211"
-               BuildableName = "LibraryInjector"
-               BlueprintName = "LibraryInjector"
-               ReferencedContainer = "container:LibraryInjector.xcodeproj">
+               BuildableName = "Maple-LibInjector"
+               BlueprintName = "Maple-LibInjector"
+               ReferencedContainer = "container:Maple-LibInjector.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56760EDD26E46D2E0023A211"
-            BuildableName = "LibraryInjector"
-            BlueprintName = "LibraryInjector"
-            ReferencedContainer = "container:LibraryInjector.xcodeproj">
+            BuildableName = "Maple-LibInjector"
+            BlueprintName = "Maple-LibInjector"
+            ReferencedContainer = "container:Maple-LibInjector.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56760EDD26E46D2E0023A211"
-            BuildableName = "LibraryInjector"
-            BlueprintName = "LibraryInjector"
-            ReferencedContainer = "container:LibraryInjector.xcodeproj">
+            BuildableName = "Maple-LibInjector"
+            BlueprintName = "Maple-LibInjector"
+            ReferencedContainer = "container:Maple-LibInjector.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

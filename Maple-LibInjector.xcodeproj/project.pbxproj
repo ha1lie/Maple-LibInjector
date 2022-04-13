@@ -36,11 +36,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		56760EDE26E46D2E0023A211 /* LibraryInjector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LibraryInjector; sourceTree = BUILT_PRODUCTS_DIR; };
+		56760EDE26E46D2E0023A211 /* Maple-LibInjector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Maple-LibInjector"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56760EE126E46D2E0023A211 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		56760EE926E46D640023A211 /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
 		56760EEB26E46D700023A211 /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
-		56760EED26E46D8F0023A211 /* LibraryInjector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LibraryInjector.entitlements; sourceTree = "<group>"; };
+		56760EED26E46D8F0023A211 /* Maple-LibInjector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Maple-LibInjector.entitlements"; sourceTree = "<group>"; };
 		56E2987026E46E1C00FFBC1F /* TestHost */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestHost; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E2987226E46E1C00FFBC1F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		56E2987B26E46E3D00FFBC1F /* libTestLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libTestLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +82,7 @@
 				56E2988726E4906600FFBC1F /* LICENSE.md */,
 				56E2988626E48F7000FFBC1F /* README.md */,
 				56E2987F26E46E4F00FFBC1F /* TestLib */,
-				56760EE026E46D2E0023A211 /* LibraryInjector */,
+				56760EE026E46D2E0023A211 /* Maple-LibInjector */,
 				56E2987126E46E1C00FFBC1F /* TestHost */,
 				56760EDF26E46D2E0023A211 /* Products */,
 				56760EE826E46D640023A211 /* Frameworks */,
@@ -92,20 +92,20 @@
 		56760EDF26E46D2E0023A211 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56760EDE26E46D2E0023A211 /* LibraryInjector */,
+				56760EDE26E46D2E0023A211 /* Maple-LibInjector */,
 				56E2987026E46E1C00FFBC1F /* TestHost */,
 				56E2987B26E46E3D00FFBC1F /* libTestLib.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56760EE026E46D2E0023A211 /* LibraryInjector */ = {
+		56760EE026E46D2E0023A211 /* Maple-LibInjector */ = {
 			isa = PBXGroup;
 			children = (
 				56760EE126E46D2E0023A211 /* main.cpp */,
-				56760EED26E46D8F0023A211 /* LibraryInjector.entitlements */,
+				56760EED26E46D8F0023A211 /* Maple-LibInjector.entitlements */,
 			);
-			path = LibraryInjector;
+			path = "Maple-LibInjector";
 			sourceTree = "<group>";
 		};
 		56760EE826E46D640023A211 /* Frameworks */ = {
@@ -146,9 +146,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		56760EDD26E46D2E0023A211 /* LibraryInjector */ = {
+		56760EDD26E46D2E0023A211 /* Maple-LibInjector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56760EE526E46D2E0023A211 /* Build configuration list for PBXNativeTarget "LibraryInjector" */;
+			buildConfigurationList = 56760EE526E46D2E0023A211 /* Build configuration list for PBXNativeTarget "Maple-LibInjector" */;
 			buildPhases = (
 				56760EDA26E46D2E0023A211 /* Sources */,
 				56760EDB26E46D2E0023A211 /* Frameworks */,
@@ -158,9 +158,9 @@
 			);
 			dependencies = (
 			);
-			name = LibraryInjector;
+			name = "Maple-LibInjector";
 			productName = LibraryInjector;
-			productReference = 56760EDE26E46D2E0023A211 /* LibraryInjector */;
+			productReference = 56760EDE26E46D2E0023A211 /* Maple-LibInjector */;
 			productType = "com.apple.product-type.tool";
 		};
 		56E2986F26E46E1C00FFBC1F /* TestHost */ = {
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 56760ED926E46D2E0023A211 /* Build configuration list for PBXProject "LibraryInjector" */;
+			buildConfigurationList = 56760ED926E46D2E0023A211 /* Build configuration list for PBXProject "Maple-LibInjector" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,7 +229,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56760EDD26E46D2E0023A211 /* LibraryInjector */,
+				56760EDD26E46D2E0023A211 /* Maple-LibInjector */,
 				56E2986F26E46E1C00FFBC1F /* TestHost */,
 				56E2987A26E46E3D00FFBC1F /* TestLib */,
 			);
@@ -379,10 +379,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
-				CODE_SIGN_ENTITLEMENTS = LibraryInjector/LibraryInjector.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Maple-LibInjector/Maple-LibInjector.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25MTNC334J;
+				DEVELOPMENT_TEAM = 5RD23JCCKU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.halz.libinject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -391,10 +393,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
-				CODE_SIGN_ENTITLEMENTS = LibraryInjector/LibraryInjector.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Maple-LibInjector/Maple-LibInjector.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25MTNC334J;
+				DEVELOPMENT_TEAM = 5RD23JCCKU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.halz.libinject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -403,8 +407,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25MTNC334J;
+				DEVELOPMENT_TEAM = 5RD23JCCKU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.halz.libinject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -413,8 +418,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25MTNC334J;
+				DEVELOPMENT_TEAM = 5RD23JCCKU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.halz.libinject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -423,7 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25MTNC334J;
+				DEVELOPMENT_TEAM = 5RD23JCCKU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
@@ -436,7 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25MTNC334J;
+				DEVELOPMENT_TEAM = 5RD23JCCKU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
@@ -448,7 +454,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56760ED926E46D2E0023A211 /* Build configuration list for PBXProject "LibraryInjector" */ = {
+		56760ED926E46D2E0023A211 /* Build configuration list for PBXProject "Maple-LibInjector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56760EE326E46D2E0023A211 /* Debug */,
@@ -457,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56760EE526E46D2E0023A211 /* Build configuration list for PBXNativeTarget "LibraryInjector" */ = {
+		56760EE526E46D2E0023A211 /* Build configuration list for PBXNativeTarget "Maple-LibInjector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56760EE626E46D2E0023A211 /* Debug */,
