@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <filesystem>
+#include <fstream>
 
 #include <EndpointSecurity/EndpointSecurity.h>
 #include <bsm/libbsm.h>
@@ -362,9 +363,22 @@ static void inject(pid_t pid, const std::string &library) {
     std::cout << "Injected " << libname << "!" << std::endl;
 }
 
+int findIn(std::string arr[], std::string val) {
+    for (int i = 0; i < arr->size(); i++) {
+        if (!arr[i].compare(val)) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+std::string targets[100];
+std::string libs[100];
+
 int main(int argc, char **argv) {
-    if (argc != 3) {
-        std::cerr << "Usage: " << argv[0] << " <process path> <library to inject>" << std::endl;
+    if (argc != 2) {
+        std::cerr << "Usage: " << argv[0] << " <listen.txt file>" << std::endl;
         std::exit(1);
     }
 
@@ -372,24 +386,51 @@ int main(int argc, char **argv) {
         std::cerr << "You must run this program as root." << std::endl;
         std::exit(1);
     }
+    
+    std::cout << "YOURE IN MAIN" << std::endl;
 
-    fs::path targetID = argv[1];
-    fs::path library = fs::canonical(argv[2]);
-
+    std::string lFile = argv[1];
+    
+    std::string lines[100];
+    int i = 0;
+    std::string line;
+    std::ifstream lFileO (lFile);
+    
+    if(lFileO.is_open()) {
+        while(!lFileO.eof()) {
+            getline(lFileO, line);
+            lines[i]=line;
+            i++;
+        }
+        lFileO.close();
+    }
+    
+    i--;
+    
+    while (i >= 0) {
+        size_t start = 0;
+        size_t end = lines[i].find(" ");
+        if (end == std::string::npos) {
+            i--;
+            continue;
+        }
+        targets[i] = lines[i].substr(start, end - start);
+        start = end + 1;
+        libs[i] = lines[i].substr(start, lines[i].length() - start);
+        i--;
+    }
+    
     es_client_t *client = NULL;
     ensureEq(es_new_client(&client, ^(es_client_t *client, const es_message_t *message) {
         switch (message->event_type) {
             case ES_EVENT_TYPE_AUTH_EXEC: {
                 const char *signingID = message->event.exec.target->signing_id.data;
                 
-//                std::cout << "Signing ID: " << signingID << std::endl;
-                
-                // Compare to the signing ID, opposed to executable location
-                if (!targetID.compare(signingID)) {
-                    
+                int found = findIn(targets, signingID);
+                if (found != -1) {
                     pid_t pid = audit_token_to_pid(message->process->audit_token);
                     try {
-                        inject(pid, library);
+                        inject(pid, fs::canonical(libs[found]));
                     } catch (const std::exception &e) {
                         std::cerr << "error: Failed to inject: " << e.what() << std::endl;
                     }

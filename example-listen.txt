@@ -1,0 +1,2 @@
+com.apple.MobileSMS libTestLib.dylib
+com.apple.Calculator libTestLib.dylib
